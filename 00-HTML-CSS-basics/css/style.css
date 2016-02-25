@@ -1,0 +1,91 @@
+*{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold !important;
+    color: black;
+}
+
+header, footer, aside, nav{
+
+    background-color: ghostwhite;
+}
+
+header, footer{
+    text-align: center;
+
+}
+
+header{
+    display: block;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    line-height: 150px;
+}
+nav{
+    display: inline-block;
+    width: 15%;
+    height: auto;
+    margin: 10px;
+    vertical-align: middle;
+    border: 1px solid #c0c0c0;
+}
+
+section{
+    display: inline-block;
+    width: 60%;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+section header{
+    height: auto;
+    display: block;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+
+}
+
+footer{
+    height: 100px;
+}
+
+aside{
+    display: inline-block;
+    width: 15%;
+    height: auto;
+}
+article{
+    min-height: 150px;
+    max-height: 500px;
+}
+.header{
+    font-size: 46px;
+    font-family: Algerian;
+}
+.footer{
+    font-size: 10px;
+    line-height: 100px;
+}
+
+.content{
+    font-size: 14px;
+
+}
+
+.navigation{
+    font-size: 12px;
+}
+
+.sidebar{
+    font-size: 10px;
+}
+
+[class$="r"]{
+    background-color: magenta;
+}
+
+:not[class$="r"] [class*="a"] {
+    background-color: blue;
+}
