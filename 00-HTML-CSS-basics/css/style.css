@@ -56,15 +56,22 @@ aside{
     width: 15%;
     height: auto;
 }
+article{
+    min-height: 150px;
+    max-height: 500px;
+}
 .header{
     font-size: 46px;
+    font-family: Algerian;
 }
 .footer{
     font-size: 10px;
+    line-height: 100px;
 }
 
 .content{
     font-size: 14px;
+
 }
 
 .navigation{
@@ -79,6 +86,6 @@ aside{
     background-color: magenta;
 }
 
-:not[class$="r"],[class*="a"] {
+:not[class$="r"] [class*="a"] {
     background-color: blue;
 }
