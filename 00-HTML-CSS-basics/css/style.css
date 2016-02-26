@@ -86,6 +86,6 @@ article{
     background-color: magenta;
 }
 
-:not[class$="r"] [class*="a"] {
+[class*="a"]:not([class$="r"]) {
     background-color: blue;
 }
