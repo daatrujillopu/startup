@@ -113,11 +113,22 @@ img {
     margin: 10px;
 }
 
+.HolyGrail-content h2{
+    font-size: 28px;
+    font-family: 'trebuchet ms', verdana, arial;
+    text-align: center;
+}
+
+.HolyGrail-content p{
+    text-align: center;
+}
+
 .HolyGrail-nav h2{
     font-size: 14px;
     font-family: 'trebuchet ms', verdana, arial;
     text-align: center;
 }
+
 
 .HolyGrail-nav ol{
     margin: 0 0 0 -25px;
