@@ -1,0 +1,142 @@
+/**
+ * 1. Avoid the IE 10-11 `min-height` bug.
+ * 2. Set `flex-shrink` to `0` to prevent some browsers from
+ *    letting these items shrink to smaller than their content's default
+ *    minimum size. See http://bit.ly/1Mn35US for details.
+ * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+ */
+
+.HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.HolyGrail-body {
+    display: flex;
+    flex: 1;
+}
+
+.HolyGrail-content {
+    flex: 1;
+}
+
+.HolyGrail-nav, .HolyGrail-ads {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+}
+
+.HolyGrail-nav {
+    /* put the nav on the left */
+    order: -1;
+}
+
+.HolyGrail,
+.HolyGrail-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.HolyGrail-nav {
+    order: -1;
+    font-size: 12px;
+}
+
+.HolyGrail-header, .HolyGrail-footer{
+    -webkit-box-flex: 0;
+    flex: none;
+}
+
+.Header {
+    padding: 1.5em;
+    background-color: rgba(147, 128, 108, .1);
+    text-align: center;
+    margin: 10px;
+}
+
+.Header-title{
+    color: #000;
+    font-size: 20px;
+    text-align: left;
+    display: inline;
+}
+
+.Header-title a{
+    text-decoration: none;
+}
+
+.Header-title img{
+    width: 3%;
+    border-radius: 6px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.Header-group{
+    display: inline;
+    float: right;
+}
+
+.Header-group img{
+    width: 12%;
+    border-radius: 6px;
+    height: 100%;
+    vertical-align: middle;
+    float: right;
+}
+
+.Header--cozy{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.5em;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.HolyGrail-nav, .HolyGrail-ads {
+    padding: 1em;
+    border-radius: 3px;
+    background: rgba(147,128,108,.1);
+    margin: 10px;
+}
+
+.HolyGrail-content{
+    margin: 10px;
+}
+
+.HolyGrail-nav h2{
+    font-size: 14px;
+    font-family: 'trebuchet ms', verdana, arial;
+    text-align: center;
+}
+
+.HolyGrail-nav ol{
+    margin: 0 0 0 -25px;
+}
+
+.HolyGrail-nav ol > li{
+    line-height: 20px;
+}
+
+@media (min-width: 768px) {
+    .HolyGrail-body {
+        flex-direction: row;
+        flex: 1;
+    }
+    .HolyGrail-content {
+        flex: 1;
+    }
+    .HolyGrail-nav, .HolyGrail-ads {
+        /* 12em is the width of the columns */
+        flex: 0 0 12em;
+    }
+}
