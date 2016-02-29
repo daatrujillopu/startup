@@ -19,6 +19,8 @@
 
 .HolyGrail-content {
     flex: 1;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .HolyGrail-nav, .HolyGrail-ads {

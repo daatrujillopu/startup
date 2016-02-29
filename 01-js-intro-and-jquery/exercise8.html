@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Exercise</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/exercisejavascript.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body class="body">
+<header>
+    Javascript and Jquery Topic
+</header>
+<nav>
+    <ul>
+        <li><a href="javascript.html">Fade in</a></li>
+        <li><a href="exercise6.html">Fade in and focus</a></li>
+        <li><a href="exercise8.html">Call Event Button Bootcamp</a></li>
+        <li><a href="exercise11.html">Ajax get Spotify</a></li>
+        <li><a href="exercise13.html">Ajax get Spotify Search Artist</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <section>
+        <h2>Patrón Módulo en JavaScript (Module Pattern)</h2>
+        <p>Los módulos son muy importantes ya que nos permiten mantener nuestro código encapsulado, sin contaminar el
+            scope global y evitar colisión de nombres. Además nos ayudan a mantener en el proyecto unidades de código
+            separadas y organizadas.</p>
+        <p>
+            El Module Pattern es considerado un Patrón de Diseño y en JavaScript nos ofrece la posibilidad de simular
+            propiedades y métodos privados. Digo “simular” porque las variables y funciones en JavaScript no tienen
+            modificadores de acceso, pero a través de los closures podemos simular este comportamiento.</p>
+
+        <p>
+            <label>Alias</label>
+            <input id="alias" type="text">
+        </p>
+    </section>
+    <section id="hiddensection" style="display: none;">
+        <h2>Hello World</h2>
+        <p>
+            <button id="eventbootcamp">Call event</button>
+        </p>
+
+    </section>
+    <section id="eventbootcampresponse" style="display: none;">
+        <p></p>
+    </section>
+</div>
+<aside>
+    <ul>
+        <li>Hosted Jquery</li>
+        <li>Learn about Jquery and Javascript</li>
+    </ul>
+</aside>
+<footer>
+    <h2>Danny Alexander Trujillo Pulgarin</h2>
+</footer>
+</body>
+<script src="js/practice.js"></script>
+</html>

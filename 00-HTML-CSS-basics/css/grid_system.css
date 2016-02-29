@@ -1,0 +1,99 @@
+.container {
+    margin: 0 auto;
+    max-width: 48rem;
+    width: 90%;
+}
+
+.column{
+    width: 30%;
+    display: inline-block;
+    margin: 10px;
+
+}
+.column:first-child{
+    float: left;
+}
+.column:last-child{
+    float: right;
+}
+
+.row{
+    padding: 5px;
+    display: block;
+    margin: 10px;
+
+}
+
+.column:first-child >.row:nth-child(even){
+    background-color: #CCC;
+}
+
+.column:first-child >.row:nth-child(odd){
+    background-color: #cc56b5;
+}
+
+.column:last-child > .row:nth-child(even){
+    background-color: #cacc0c;
+}
+
+.column:last-child > .row:nth-child(odd){
+    background-color: #20b0b4;
+}
+
+.row:first-child{
+    background-color: #b86e6e !important;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 150px;
+    height: 150px;
+}
+
+.row:nth-child(even){
+    vertical-align: middle;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+}
+
+.row:nth-child(odd){
+    background-color: #65b86a;
+    vertical-align: middle;
+    text-align: center;
+    height: 180px;
+    line-height: 180px;
+}
+
+.row.row11{
+    background-color: #1e80ee !important;
+    height: 120px;
+    line-height: 120px;
+}
+
+.row.row6{
+    height: 300px;
+}
+
+.row.row13{
+    height: 100px;
+    line-height: 100px;
+}
+
+.row.row7{
+    height: 250px;
+    line-height: 250px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .column{
+        width: 45%;
+        margin: 5px;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .column{
+        width: 100%;
+    }
+}
