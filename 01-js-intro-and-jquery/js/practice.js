@@ -22,7 +22,7 @@ $("#eventbootcamp").click(function () {
         },
 
     }).done(function (msg) {
-        console.log(msg);
+
     });
 });
 

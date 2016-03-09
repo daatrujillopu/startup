@@ -92,3 +92,11 @@ section h2{
     width: 90%;
     height: auto;
 }
+
+#hiddensection{
+    display: none;
+}
+
+.fadeIn{
+    transition: opacity 3s ease-in-out;
+}
