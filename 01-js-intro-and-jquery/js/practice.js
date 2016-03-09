@@ -3,11 +3,15 @@
  */
 
 $(function () {
-    $.when(
+    $("#hiddensection").fadeIn(5000).then(function(){
+        $("#alias").focus();
+    });
+    
+    /*$.when(
         $("#hiddensection").fadeIn(5000)
     ).then(function () {
         $("#alias").focus();
-    });
+    });*/
 
     //
 });
@@ -31,6 +35,7 @@ $("#spotifyapi").click(function () {
         url: "https://api.spotify.com/v1/search",
         data: {"q": "Rolling Stones", "type": "album"},
         type: "GET",
+        dataType: "json",
     }).done(function (content) {
 
         var html = '';
