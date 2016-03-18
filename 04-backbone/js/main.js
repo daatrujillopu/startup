@@ -11,7 +11,9 @@ requirejs.config({
 
 requirejs( [ "router" ], function (  BootcampRouter ){
 
-    var bootRutes = new BootcampRouter();
-    Backbone.history.start()
+    var sectioncontainer = document.getElementById("container");
+    router = new BootcampRouter({ view: sectioncontainer});
+
+    Backbone.history.start();
 
 });

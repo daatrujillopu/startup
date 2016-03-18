@@ -1,0 +1,4 @@
+<div>
+	<h1> S.O.S</h1>
+	<button class="js-sample" type="button">Click Me!</button>
+</div>
