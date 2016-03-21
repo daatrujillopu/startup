@@ -16,6 +16,12 @@ function Movie() {
 
 }
 
+function DownloadedMovie(){
+    this.countDownloaded = 0;
+}
+
+
+
 Movie.prototype = {
     constructor: Movie,
 
@@ -59,7 +65,29 @@ Movie.prototype = {
 
 };
 
-var terminator = new Movie();
+DownloadedMovie.prototype = new Movie();
+DownloadedMovie.prototype.constructor = DownloadedMovie;
+DownloadedMovie.prototype.download = function (){
+    this.countDownloaded += 1;
+
+    console.log(this.countDownloaded);
+};
+
+
+var terminator = new DownloadedMovie();
+terminator.set("title", "Terminator");
+terminator.set("director", "I Dont Know");
+terminator.download();
+terminator.addEventListener("onplay", "test1");
+terminator.play();
+terminator.download();
+terminator.addEventListener("onstop", "test2");
+terminator.stop();
+terminator.addEventListener("onplay", "test3");
+terminator.play();
+terminator.download();
+
+/*var terminator = new Movie();
 terminator.set("title", "Terminator");
 terminator.set("director", "I Dont Know");
 terminator.addEventListener("onplay", "test1");
@@ -68,4 +96,6 @@ terminator.addEventListener("onstop", "test2");
 terminator.stop();
 terminator.addEventListener("onplay", "test3");
 terminator.play();
-console.log(terminator.events);
+console.log(terminator.events);*/
+
+
