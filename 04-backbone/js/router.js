@@ -13,9 +13,9 @@ define(["views/spotifyv1View"], function (spotifyv1) {
         },
 
         onSpotifyurl: function () {
-            console.log(this.el);
+            //console.log(this.el);
             var view = new spotifyv1({container: this.el});
-            console.log("Enter a la ruta");
+            //console.log("Enter a la ruta");
         }
 
     });
