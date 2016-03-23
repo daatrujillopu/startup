@@ -9,7 +9,7 @@ define(["text!htmlviews/spotifyv1Template.html", "collections/spotifyv1Collectio
         dataSpotify: {},
         initialize: function (options) {
             this.el = options.container;
-            this.dataSpotify = new collectSpotifyv1();
+            //this.dataSpotify = new collectSpotifyv1();
             this.render();
 
 
@@ -18,17 +18,11 @@ define(["text!htmlviews/spotifyv1Template.html", "collections/spotifyv1Collectio
              this.element.innerHTML = template;*/
         },
         render: function () {
-            this.dataSpotify.fetch({
-                success: function (item, index, all) {
-
-                    item.create({
-                        albumName: item.get("name"),
-                        imageUrl: item.get("image.url")
-                    });
-                }
+            var templateunderscore = _.template(template);
+            this.el.innerHTML = templateunderscore({
+                username: "Danny",
+                apellido: "Trujillo"
             });
-            console.log(this.dataSpotify.toJSON());
-            this.el.innerHTML = template;
         }
     });
     return spotifyv1View;
