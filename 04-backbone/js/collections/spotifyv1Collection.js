@@ -3,10 +3,13 @@
  */
 define(["model/spotifyv1Model"], function (Spotifyv1Model) {
     var spotifyCollection = Backbone.Collection.extend({
-        //model: Spotifyv1Model,
+
+        model: Spotifyv1Model,
         url: "js/temporalServices/rollingStones.json",
-        parse: function(response){
-          return response.albums;
+
+        parse: function (response) {
+            //console.log(response.albums.items)
+            return response.albums.items;
         },
     });
 
