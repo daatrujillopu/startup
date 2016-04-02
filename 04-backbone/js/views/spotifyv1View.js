@@ -5,35 +5,38 @@ define(["text!htmlviews/spotifyv1Template.html", "collections/spotifyv1Collectio
     function (template, collectSpotifyv1) {
         var spotifyv1View = Backbone.View.extend({
                 el: null,
-                collSpotify: null,
-                dataSpotify: new collectSpotifyv1(),
+                collection2: new Array(),
                 html: "",
 
 
                 initialize: function (options) {
                     this.el = options.container;
-                    this.listenTo(this.dataSpotify.fetch(), "change", this.render)
-                    /*this.dataSpotify.fetch({
-                        success: function (algo, response) {
-                            var data = response.albums.items;
-                            for (var i = 0; i < data.length; i++) {
-                                console.log(data[i].name);
-                                this.html = data[i].name;
-                            }
+                    this.dataSpotify =  new collectSpotifyv1();
 
-                        }
-                    });
-                    this.render();*/
+                    this.render();
 
                 }
                 ,
                 render: function () {
 
                     var templateunderscore = _.template(template);
+
+                    this.dataSpotify.fetch({
+                        success: this.transformdata
+                    });
+
+                    console.log(this.collection2);
                     this.el.innerHTML = templateunderscore({
                         username: "Danny",
                         apellido: "Trujillo",
                         ejemplo: this.html
+                    });
+                },
+
+                transformdata: function(data){
+                    _.each(data.models, function (item) {
+                        console.log(item.attributes.name );
+                        this.collection2.append(item.attributes.name);
                     });
                 }
             })

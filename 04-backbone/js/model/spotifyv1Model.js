@@ -4,11 +4,11 @@
 
 define([], function () {
     var Spotifyv1Model = Backbone.Model.extend({
-        defaults: {
+        /*defaults: {
             name: "",
-            images: "",
+            uri: "",
         },
-        idAttribute: "albumName",
+        idAttribute: "name",*/
 
        /* url: "js/temporalServices/rollingStones.json",
         parse: function (response) {
