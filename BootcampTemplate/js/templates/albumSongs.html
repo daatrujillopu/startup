@@ -1,0 +1,13 @@
+<div class="col-4">
+    <img src="https://i.scdn.co/image/{{ imageUrl }}">
+</div>
+
+<div class="col-8">
+    {{#each albumData}}
+    <div class="tracklist">
+        <div class="numbersong">{{num}}</div>
+        <div class="titlesong">{{name}}</div>
+        <siv class="playsong"><audio controls><source src="{{preview_song}}"></audio> </siv>
+    </div>
+    {{/each}}
+</div>

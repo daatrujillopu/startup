@@ -3,10 +3,13 @@
  */
 define(["views/spotifyv1View"], function (spotifyv1) {
     var myRoutes = Backbone.Router.extend({
+
         routes: {
             "spotifyv1": "onSpotifyurl"
         },
+
         el: null,
+
         initialize: function (options) {
             this.el = options.view;
             //console.log(this.el);

@@ -1,0 +1,16 @@
+<div class="text-center">
+    <h2>{{ artistName }}</h2>
+</div>
+
+{{#each albumData }}
+<div class="col-3">
+    <a href="#albumsongs/{{id}}/{{albumName}}/{{partUrl}}">
+        <h4>{{albumName}}</h4>
+    </a>
+    <a href="#albumsongs/{{id}}/{{albumName}}/{{partUrl}}">
+        <img src="{{image}}">
+    </a>
+</div>
+{{/each }}
+
+

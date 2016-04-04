@@ -1,0 +1,311 @@
+* {
+    font-family: Arial, sans-serif;
+
+}
+
+.body {
+    margin: 0 auto;
+    max-width: 60rem;
+    width: 70%;
+    height: auto;
+    background-color: #f8f8f8;
+    min-height: 100%;
+    position: relative;
+    border: 1px solid #3d768a;
+    box-shadow: 8px 6px 27px 0px rgba(50, 50, 50, 1);
+}
+
+header {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+
+}
+
+.logo {
+    display: inline-block;
+    max-width: 40%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.logo img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
+/* ***************** Aquí Comienza El Menu *****************/
+.menu,
+.menu ul,
+.menu ul li,
+.menu ul li a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.menu:after,
+.menu > ul:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.menu {
+    width: auto;
+    border-bottom: 3px solid #47c9af;
+    font-family: Raleway, sans-serif;
+    line-height: 53px;
+    height: 55px;
+}
+
+.menu ul {
+    background: #ffffff;
+}
+
+.menu > ul > li {
+    float: left;
+}
+
+.menu.align-center > ul {
+    font-size: 0;
+    text-align: center;
+}
+
+.menu.align-center > ul > li {
+    display: inline-block;
+    float: none;
+}
+
+.menu.align-right > ul > li {
+    float: right;
+}
+
+.menu.align-right > ul > li > a {
+    margin-right: 0;
+    margin-left: -4px;
+}
+
+.menu > ul > li > a {
+    z-index: 2;
+    padding: 18px 25px 12px 25px;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #444444;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    margin-right: -4px;
+}
+
+.menu > ul > li.active > a,
+.menu > ul > li:hover > a,
+.menu > ul > li > a:hover {
+    color: #ffffff;
+}
+
+.menu > ul > li > a:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 120%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    content: "";
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: perspective(5px) rotateX(2deg);
+    -webkit-transform-origin: bottom;
+    -moz-transform: perspective(5px) rotateX(2deg);
+    -moz-transform-origin: bottom;
+    transform: perspective(5px) rotateX(2deg);
+    transform-origin: bottom;
+}
+
+.menu > ul > li.active > a:after,
+.menu > ul > li:hover > a:after,
+.menu > ul > li > a:hover:after {
+    background: #47c9af;
+}
+
+/* ********************************************************/
+
+section {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 100px;
+    background-color: white;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 86%;
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+
+    background: rgb(212, 228, 239); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0); /* IE6-9 */
+
+}
+
+.containerViews {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+input[type="text"] {
+    max-width: 50%;
+    min-width: 10%;
+    border: 1px solid #c0c0c0;
+    border-radius: 6px;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+}
+
+button {
+    background-color: #599bb3;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+}
+
+button:hover {
+    background-color: #408c99;
+    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+}
+
+.col-3 {
+    width: 28%;
+    display: inline-block;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    padding: 0px;
+    margin: 15px;
+    box-shadow: 8px 6px 27px 0px rgba(50, 50, 50, 1);
+}
+
+.col-3 img {
+    max-width: 80%;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+}
+
+.col-3:hover {
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.col-4 {
+    width: 30%;
+    display: inline-block;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    padding: 0px;
+    margin: 25px;
+    box-shadow: 8px 6px 27px 0px rgba(50, 50, 50, 1);
+
+}
+
+.col-4 img {
+    max-width: 85%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+
+}
+
+.col-8 {
+    width: 60%;
+    display: inline-block;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    padding: 2px;
+    box-shadow: 8px 6px 27px 0px rgba(50, 50, 50, 1);
+    vertical-align: middle;
+    background-color: #E6E6E6;
+}
+
+.col-8 .tracklist {
+    display: block;
+    width: 97%;
+    padding: 4px;
+    margin: 6px;
+    background-color: #F1F1F1;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.col-8 .numbersong {
+    width: 8%;
+    display: inline-table;
+    padding: 0px;
+    vertical-align: super;
+}
+
+.col-8 .titlesong {
+    width: 35%;
+    display: inline-table;
+    padding: 0px;
+    vertical-align: super;
+}
+
+.col-8 .playsong audio{
+    width: 40%;
+    display: inline-block;
+    padding: 0px;
+    height: 30px;
+
+}
+
+.text-center {
+    text-align: center;
+    text-shadow: 5px 2px 3px rgba(150, 150, 150, 1);
+}
+
+
+

@@ -4,42 +4,50 @@
 define(["text!htmlviews/spotifyv1Template.html", "collections/spotifyv1Collection"],
     function (template, collectSpotifyv1) {
         var spotifyv1View = Backbone.View.extend({
-                el: null,
-                collection2: new Array(),
-                html: "",
 
 
-                initialize: function (options) {
-                    this.el = options.container;
-                    this.dataSpotify =  new collectSpotifyv1();
+            el: null,
+            collection2: {},
+            html: "",
+            buttonsearch: "",
 
-                    this.render();
+            template: Handlebars.compile(template),
 
-                }
-                ,
-                render: function () {
+            initialize: function (options) {
+                this.el = options.container;
+                this.render();
 
-                    var templateunderscore = _.template(template);
+            },
 
-                    this.dataSpotify.fetch({
-                        success: this.transformdata
-                    });
+            render: function () {
+                var templateunderscore = this.template;
 
-                    console.log(this.collection2);
-                    this.el.innerHTML = templateunderscore({
-                        username: "Danny",
-                        apellido: "Trujillo",
-                        ejemplo: this.html
-                    });
-                },
+                this.el.innerHTML = templateunderscore({
+                    username: "Danny",
+                    apellido: "Trujillo",
+                    ejemplo: this.collection2
+                })
+                $(".beginsearchartist").on("click", this.onClick);
+            },
 
-                transformdata: function(data){
-                    _.each(data.models, function (item) {
-                        console.log(item.attributes.name );
-                        this.collection2.append(item.attributes.name);
-                    });
-                }
-            })
-            ;
+            onClick: function () {
+                var self = this;
+                var artist = document.getElementById("searchartist");
+                this.dataSpotify = new collectSpotifyv1(artist.value);
+                this.dataSpotify.fetch().done(function () {
+                    self.collection2 = self.dataSpotify.toJSON();
+                    for( i in self.collection2){
+                        console.log(i);
+                    }
+                    //self.renderSearch;
+                    //var cosa = document.getElementById("albumsearch");
+
+                    //cosa.innerHTML = self.renderSearch;
+                });
+
+            },
+
+
+        });
         return spotifyv1View;
     });
